@@ -51,13 +51,13 @@ import{ expect } from 'chai'
 import StudentFactory from '../src/creational/factory.js'
 
 describe('Factory Pattern test', () => {
-    it('Create new student name Chien', ()=>{
-        const student = StudentFactory.create('Chien')
-        expect(student.name).to.equal('Chien')
+    it('Create primary school student name Chien', ()=>{
+        const student = StudentFactory.create(8, 'Chien')
+        expect(student.school).to.equal('primary school')
     })
-    it('Create new student name John', ()=>{
-        const student = StudentFactory.create('John')
-        expect(student.name).to.equal('John')
+    it('Create high school student', ()=>{
+        const student = StudentFactory.create(17)
+        expect(student.school).to.equal('high school')
     })
 })
 
