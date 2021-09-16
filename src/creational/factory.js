@@ -1,5 +1,5 @@
 /**
- * Program Factory : create other objects
+ * Factory Pattern : create other objects
  */
 
 class Student{
@@ -11,17 +11,9 @@ class Student{
 }
 
 class StudentFactory{
-    create(name){
+    static create(name){
         return new Student(name) // age & className are undefined
     }
 }
 
-function run(){
-    const studentFactory = new StudentFactory()
-    const firstStudent = studentFactory.create('chien')
-    const secondStudent = studentFactory.create('john')
-
-    console.log('First student', firstStudent)
-    console.log('Second student', secondStudent)
-}
-run()
+export default StudentFactory
