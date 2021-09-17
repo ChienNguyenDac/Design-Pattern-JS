@@ -50,7 +50,7 @@
 import{ expect } from 'chai'
 import StudentFactory from '../src/creational/factory.js'
 
-describe('Factory Pattern test', () => {
+describe('Method Factory Pattern test', () => {
     it('Create primary school student name Chien', ()=>{
         const student = StudentFactory.create(8, 'Chien')
         expect(student.school).to.equal('primary school')
